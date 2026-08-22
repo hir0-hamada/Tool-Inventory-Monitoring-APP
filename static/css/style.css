@@ -1,0 +1,61 @@
+/* Infineon Technologies inspired sustainability green/teal */
+:root {
+    --infineon-green: #00A99D; /* Modern corporate teal/green */
+    --infineon-green-dark: #00877C;
+    --infineon-green-light: #26BDB2;
+}
+
+body {
+    /* Padding to avoid content hiding behind the fixed navbar */
+    padding-top: 76px;
+    background-color: #F8F9FA;
+}
+
+/* Navbar Styling */
+.navbar-custom {
+    background-color: var(--infineon-green);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 12px 20px;
+}
+
+.navbar-custom .navbar-brand {
+    color: #FFFFFF;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-right: 30px;
+}
+
+.navbar-custom .navbar-brand:hover {
+    color: #F0F0F0;
+}
+
+.navbar-custom .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    padding: 8px 16px !important;
+    margin: 0 4px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover state */
+.navbar-custom .nav-link:hover {
+    color: #FFFFFF;
+    background-color: var(--infineon-green-dark);
+}
+
+/* Active Indicator - Brightening the box when user is on the route */
+.navbar-custom .nav-item .nav-link.active {
+    color: #FFFFFF;
+    background-color: var(--infineon-green-light);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    font-weight: 600;
+}
+
+/* Toggler for mobile */
+.navbar-toggler {
+    border-color: rgba(255,255,255,0.5);
+}
+.navbar-toggler-icon {
+    filter: invert(1);
+}
