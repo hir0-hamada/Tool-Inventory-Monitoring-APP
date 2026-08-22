@@ -6,56 +6,81 @@
 }
 
 body {
-    /* Padding to avoid content hiding behind the fixed navbar */
-    padding-top: 76px;
+    /* Slightly reduced padding since the navbar is now thinner */
+    padding-top: 62px;
     background-color: #F8F9FA;
 }
 
 /* Navbar Styling */
 .navbar-custom {
-    background-color: var(--infineon-green);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 12px 20px;
+    background-color: #FFFFFF; /* Clean white background */
+    border-bottom: 1px solid #E0E0E0; /* Subtle line boundary */
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); /* Very light shadow */
+    
+    /* Set top and bottom padding to 0 so the links touch the bottom edge */
+    padding: 0 20px;
 }
 
 .navbar-custom .navbar-brand {
-    color: #FFFFFF;
+    color: #333333; /* Dark text for brand */
     font-weight: 700;
     letter-spacing: 1px;
     margin-right: 30px;
+    
+    /* Added padding here to keep the brand text vertically centered */
+    padding-top: 18px;
+    padding-bottom: 18px;
 }
 
 .navbar-custom .navbar-brand:hover {
-    color: #F0F0F0;
+    color: var(--infineon-green);
 }
 
 .navbar-custom .nav-link {
-    color: rgba(255, 255, 255, 0.85);
+    color: #555555; /* Standard dark grey text for inactive links */
     font-weight: 500;
-    padding: 8px 16px !important;
+    
+    /* Shifted the padding to the link itself to push the border to the edge. 
+       14px bottom + 3px border = 17px top padding, keeping text centered */
+    padding: 17px 16px 14px 16px !important;
     margin: 0 4px;
-    border-radius: 6px;
     transition: all 0.2s ease-in-out;
+    
+    /* Invisible border to prevent the menu from jumping when active */
+    border-bottom: 3px solid transparent; 
 }
 
 /* Hover state */
 .navbar-custom .nav-link:hover {
-    color: #FFFFFF;
-    background-color: var(--infineon-green-dark);
+    color: var(--infineon-green);
+    border-bottom: 3px solid #E0E0E0; /* Light grey underline on hover */
 }
 
-/* Active Indicator - Brightening the box when user is on the route */
+/* Active Indicator - Matches the Infineon "Applications" tab */
 .navbar-custom .nav-item .nav-link.active {
-    color: #FFFFFF;
-    background-color: var(--infineon-green-light);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    color: var(--infineon-green);
     font-weight: 600;
+    border-bottom: 3px solid var(--infineon-green); /* Thick green line */
 }
 
 /* Toggler for mobile */
 .navbar-toggler {
-    border-color: rgba(255,255,255,0.5);
+    border-color: rgba(0,0,0,0.1);
 }
 .navbar-toggler-icon {
-    filter: invert(1);
+    /* Kept default dark icon since background is now white */
+    filter: none; 
+}
+
+/* --- Utility Classes for Buttons --- */
+/* You can now use these classes on your buttons in the HTML */
+.btn-infineon {
+    background-color: var(--infineon-green);
+    color: white;
+    border: none;
+}
+
+.btn-infineon:hover {
+    background-color: var(--infineon-green-dark);
+    color: white;
 }

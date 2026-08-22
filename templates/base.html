@@ -19,14 +19,14 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link {% if request.endpoint == 'dashboard' %}active{% endif %}" href="{{ url_for('dashboard') }}">Dashboard</a>
+                        <a class="nav-link {% if request.endpoint == 'catalog' %}active{% endif %}" href="{{ url_for('catalog') }}">Dashboard</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.endpoint == 'activity' %}active{% endif %}" href="{{ url_for('activity') }}">Activity</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.endpoint == 'catalog' %}active{% endif %}" href="{{ url_for('catalog') }}">Catalog</a>
-                    </li>
+  <!--                 <li class="nav-item">
+                        <a class="nav-link {% if request.endpoint == 'catalog' %}active{% endif %}" href="{{ url_for('catalog') }}">Catalog</a> 
+                    </li>-->
                 </ul>
             </div>
         </div>
